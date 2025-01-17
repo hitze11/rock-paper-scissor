@@ -7,6 +7,78 @@
   <link href="./src/style.css" rel="stylesheet"/>
   <script type="module" defer src="/src/main.js"></script>
   <title>Rock Paper Scissors</title>
+  <style>
+    /* Allgemeine Button-Stile */
+    .button {
+      display: block;
+      text-align: center;
+      margin: 10px auto;
+      padding: 20px;
+      border-radius: 50%;
+      border-width: 8px;
+      border-style: solid;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    
+    .button-paper {
+      background-color: white;
+      border-color: #54d80d;
+    }
+
+    .button-scissors {
+      background-color: white;
+      border-color: #de3b5a;
+    }
+
+    .button-rock {
+      background-color: white;
+      border-color: #10ddeb;
+    }
+
+    .button-rules {
+      background-color: transparent;
+      border-color: black;
+      color: black;
+    }
+
+  
+    .button:hover {
+      color: white; 
+    }
+
+    .button-paper:hover {
+      background-color: #54d80d;
+      border-color: white;
+    }
+
+    .button-scissors:hover {
+      background-color: #de3b5a;
+      border-color: white;
+    }
+
+    .button-rock:hover {
+      background-color: #10ddeb;
+      border-color: white;
+    }
+
+    .button-rules:hover {
+      background-color: black;
+      color: white;
+    }
+
+  
+    .button img {
+      width: 50px;
+      height: 50px;
+      transition: all 0.3s ease;
+    }
+
+    .button:hover img {
+      transform: scale(1.2);
+    }
+  </style>
 </head>
 
 <body class="container mx-auto font-custom text-white">
@@ -22,16 +94,16 @@
   
     <!-- Hauptbereich mit Buttons -->
     <main class="flex flex-col items-center mt-10 space-y-4">
-      <button class="size-24 p-2 bg-white border-8 rounded-full border-[#10ddeb] hover:size-28" data-choice="rock">
-        <img src="./images/rock.svg" alt="Rock" />
-      </button>
-      <button class="block text-center mx-auto size-24 p-2 bg-white border-8 rounded-full border-[#f34545] hover:size-28" data-choice="paper">
+      <button class="button button-paper size-24" data-choice="paper">
         <img src="./images/paper.svg" alt="Paper" />
       </button>
-      <button class="size-24 p-2 bg-white border-8 rounded-full border-[#de3b5a] hover:size-28" data-choice="scissors">
+      <button class="button button-scissors size-24" data-choice="scissors">
         <img src="./images/scissors.svg" alt="Scissors" />
       </button>
-      <button class="border-2 rounded-full p-4 text-4xl hover:text-6xl text-black" id="rulesbutton">Rules</button>
+      <button class="button button-rock size-24" data-choice="rock">
+        <img src="./images/rock.svg" alt="Rock" />
+      </button>
+      <button class="button button-rules border-2 rounded-full p-4 text-4xl hover:text-6xl text-black" id="rulesbutton">Rules</button>
     </main>
   </div>
 
